@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>GMail</title>
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<aside>
+	  <h1 class='title'><i class="fab fa-mailchimp" style="color: darkcyan;"></i>Gmail</h1>
+	  <button class='button-silver  mail-compose'>Compose</button>
+
+	  <div class='tabs'>
+		<input type='radio' name='tabs' id='chat-toggle' checked>
+		<label for='chat-toggle'>
+		  <button class='button-large button-grey'><i class="fa fa-comment"></i></button>
+		</label>
+		<input type='radio' name='tabs' id='gadgets-toggle'>
+		<label for='gadgets-toggle'>
+		  <button class='button-large button-grey'><i class="fa fa-ellipsis-h"></i></button>
+		</label>
+	  </div>
+	  
+	  <div class='tab-content'>
+		  <div class='chatbox'>
+        <div class='seperator'></div>
+		    <div class='status-bar'>    
+		      <button class='button-grey button-large right'><i class="fa fa-video-camera"></i></button>
+		      <button class='button-grey button-large left'><i class="fa fa-phone"></i></button>
+		      
+			  <div class="status-change">
+				  <button class="button-grey button-large">
+					<div class='right chat-status'>
+						<span class="available"></span>
+						<i class="fa fa-sort-asc"></i>
+					</div>	           
+				  </button>
+				  <img class='profile-thumb'  src='http://gravatar.com/avatar/798a4f92680d0678f1034006f0af7952'> 
+			  </div>     
+		    </div>
+		    <input class='input-small' type='text' placeholder='Search people'>
+		    <ul class='contact-list'>
+		      <li><span class='available'></span>Ranjtih</li>
+		      <li><span class='available'></span>Read-work</li>
+		      <li><span class='available'></span>Job</li>
+		      <li><span class='busy'></span>Lucky</li>
+		      <li><span class='busy'></span>Teju</li>
+		      <li><span class='busy'></span>List</li>
+		      <li><span class='busy'></span>Love</li>
+		      <li><span class='offline'></span>Failure</li>
+		      <li><span class='offline'></span>Breakup</li>
+		      <li><span class='offline'></span>OneBeer</li>
+		    </ul>
+		  </div>
+		  <div class='gadgetbox hide'>
+        <div class='seperator'></div>
+		  	Google Calendar
+		  	<button class='right button-grey'><i class="fa fa-plus-square-o"></i></button>
+		  </div>
+	  </div>
+	  <ul class='mail-categories'>
+	    <li class='unread'>Inbox (77)</li>
+	    <li>Starred</li>
+	    <li>Important</li>
+	    <li>Sent Mail</li>
+	    <li>Drafts (2)</li>
+	    <li>All Mail</li>
+	    <li class='unread'>Spam (18)</li>
+	  </ul>
+	</aside>
+	<main>
+	  <div class='mail-search'>
+	    <button class='button-blue button-large right'><i class="fa fa-search"></i></button>
+	    <button class='more right'><i class="fa fa-sort-asc"></i></button>
+	    <div class='input-box'>
+	      <input class='input-medium' type='text'>
+
+		  <form class='search-pref popup-window hide'>
+		    <button class='right button-small button-silver button-exit'><i class="fa fa-times"></i></button>
+		    <label>Search </label>
+		      <span class='options-wrapper'>
+		        <button class="button-options button-silver button-large">
+		          <div class='more'><i class="fa fa-sort"></i></div>
+		          <span> All Mail </span>
+		        </button>
+		        <ul class='dropdown-menu hide'>
+		          <li>All Mail</li>
+		          <li>Inbox</li>
+		          <li>Stared</li>
+		          <li>Sent Mail</li>
+		          <li>Drafts</li>
+		        </ul>
+		      </span>
+		    <br/>
+		    <label>From</label><input class='input-small' type='text'>
+		    <label>To</label><input class='input-small' type='text'>
+		    <label>Subject</label><input class='input-small' type='text'>
+		    <label>Has the words</label><input class='input-small' type='text'>
+		    <label>Doesn't have</label><input class='input-small' type='text'>
+		    <input type='checkbox'><label> Has attachment</label>  <br/>
+		    <input type='checkbox'><label> Don't include chats</label>
+		    <br/>
+
+		    <label>Size</label>
+		      <span class='options-wrapper'>
+		        <button class="button-options button-silver button-large">
+		          <div class='more'><i class="fa fa-sort"></i></div>
+		          <span> greater than </span>
+		        </button>
+		        <ul class='dropdown-menu hide'>
+		          <li>greater than</li>
+		          <li>less than</li>
+		        </ul>
+		      </span>
+
+		      <input class='input-small input-inline' type='text'>
+		      <span class='options-wrapper'>
+		        <button class="button-options button-silver button-large">
+		          <div class='more'><i class="fa fa-sort"></i></div>
+		          <span> MB </span>
+		        </button>
+		        <ul class='dropdown-menu hide'>
+		          <li>MB</li>
+		          <li>KB</li>
+		          <li>Bytes</li>
+		        </ul>
+		      </span>
+		    <br/>
+		    <br/>
+		    <label>Date within</label>
+		    <span class='options-wrapper'>
+		      <button class="button-options button-silver button-large">
+		        <div class='more'><i class="fa fa-sort"></i></div>
+		        <span> 1 day </span>
+		      </button>
+		      <ul class='dropdown-menu hide'>
+		          <li> 1 day </li>
+		          <li> 3 days </li>
+		          <li> 1 week </li>
+		          <li> 2 weeks </li>
+		          <li> 1 month </li>
+		          <li> 2 months </li>
+		          <li> 6 months </li>
+		          <li> 1 year </li>
+		      </ul>
+		    </span>
+		    <label> of </label><input class='input-small input-inline' type='text'>
+
+		    <br/><br/>
+		    <p class='comment right'>Examples: Friday, today, Mar 26, 3/26/04</p><br/>
+		    <button class='button-blue button-large'><i class="fa fa-search"></i></button>
+		  </form>
+	    </div>
+	  </div>
+	 
+
+	  <ul class='mail-menu'>
+	  	<li>
+	  		<div class='options-wrapper'>
+		  		<button class="button-checkAll button-options button-large button-grey">
+			        <div class='more'><i class="fa fa-sort-asc"></i></div>
+			        <input type='checkbox' class='mail-check' id='chkAll'>
+			        <label for='chkAll'></label>		      
+			    </button>
+			    <ul class='dropdown-menu drop-bottom hide'>
+			        <li>All</li>
+			        <li>None</li>
+			        <li>Read</li>
+			        <li>Unread</li>
+			        <li>Starred</li>
+			        <li>Unstarred</li>
+			    </ul>
+			</div>
+		</li>
+	    <li>
+	    	<button class='button-grey button-large'><i class="fa fa-refresh"></i></button>
+	    </li>
+	    <li>
+		    <div class='options-wrapper'>
+		  		<button class="button-options button-large button-grey">
+			        <div class='more'><i class="fa fa-sort-asc"></i></div>
+		  			<p>More</p>	      
+			    </button>
+			    <ul class='dropdown-menu drop-bottom hide'>
+			        <li>Mark all as read</li>
+			        <li class='splitLine'></li>
+			        <li class='disable'>Select messages to <br/> see more actions</li>
+			    </ul>
+			</div>
+		</li>
+	  </ul>
+
+	  <div class='mail-box'>
+		  <table>
+		    <tr>
+		      <td class='blank-cell'>  </td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk1'>
+		        <label for='chk1'></label>
+		        <input type='checkbox' class='mail-star' id='star1'>
+		        <label for='star1'></label>
+		        <input type='checkbox' class='mail-important' id='im1'>
+		        <label for='im1'></label>
+		      </td>
+		      <td class='mail-sender'>Sit salutatus</td>
+		      <td class='mail-title'> libris repudiandae</td>
+		      <td class='mail-time'>02:33 pm</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk2'>
+		        <label for='chk2'></label>
+		        <input type='checkbox' class='mail-star' id='star2'>
+		        <label for='star2'></label>
+		        <input type='checkbox' class='mail-important' id='im2'>
+		        <label for='im2'></label>
+		      </td>
+		      <td class='mail-sender'>Pinterest Weekly</td>
+		      <td class='mail-title'>Fresh Pins for you!</td>
+		      <td class='mail-time'>11:09 am</td>
+		    </tr>
+		    <tr class='unread'>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk3'>
+		        <label for='chk3'></label>
+		        <input type='checkbox' class='mail-star' id='star3'>
+		        <label for='star3'></label>
+		        <input type='checkbox' class='mail-important' id='im3'>
+		        <label for='im3'></label>
+		      </td>
+		      <td class='mail-sender'>Amy Lee</td>
+		      <td class='mail-title'>mea praesent vituperata</td>
+		      <td class='mail-time'>10:27 am</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk4'>
+		        <label for='chk4'></label>
+		        <input type='checkbox' class='mail-star' id='star4'>
+		        <label for='star4'></label>
+		        <input type='checkbox' class='mail-important' id='im4'>
+		        <label for='im4'></label>
+		      </td>
+		      <td class='mail-sender'>June, me(2)</td>
+		      <td class='mail-title'>Blood Test</td>
+		      <td class='mail-time'>7:30 am</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk5'>
+		        <label for='chk5'></label>
+		        <input type='checkbox' class='mail-star' id='star5'>
+		        <label for='star5'></label>
+		        <input type='checkbox' class='mail-important' id='im5'>
+		        <label for='im5'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>Your Order</td>
+		      <td class='mail-time'>7:02 am</td>
+		    </tr>
+		    <tr  class='unread'>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk6'>
+		        <label for='chk6'></label>
+		        <input type='checkbox' class='mail-star' id='star6'>
+		        <label for='star6'></label>
+		        <input type='checkbox' class='mail-important' id='im6'>
+		        <label for='im6'></label>
+		      </td>
+		      <td class='mail-sender'>Agam </td>
+		      <td class='mail-title'> copiosae quo in, te vix eligendi</td>
+		      <td class='mail-time'>5:28 am</td>
+		    </tr>
+		    <tr class='unread'>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk7'>
+		        <label for='chk7'></label>
+		        <input type='checkbox' class='mail-star' id='star7'>
+		        <label for='star7'></label>
+		        <input type='checkbox' class='mail-important' id='im7'>
+		        <label for='im7'></label>
+		      </td>
+		      <td class='mail-sender'>Mei eu</td>
+		      <td class='mail-title'>Issue #101</td>
+		      <td class='mail-time'>Apr 18</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk8'>
+		        <label for='chk8'></label>
+		        <input type='checkbox' class='mail-star' id='star8'>
+		        <label for='star8'></label>
+		        <input type='checkbox' class='mail-important' id='im8'>
+		        <label for='im8'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>Your Order</td>
+		      <td class='mail-time'>Apr 17</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk9'>
+		        <label for='chk9'></label>
+		        <input type='checkbox' class='mail-star' id='star9'>
+		        <label for='star9'></label>
+		        <input type='checkbox' class='mail-important' id='im9'>
+		        <label for='im9'></label>
+		      </td>
+		      <td class='mail-sender'>HTML5 Weekly</td>
+		      <td class='mail-title'>This Week's HTML5 and Browser Technology News</td>
+		      <td class='mail-time'>Apr 17</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk10'>
+		        <label for='chk10'></label>
+		        <input type='checkbox' class='mail-star' id='star10'>
+		        <label for='star10'></label>
+		        <input type='checkbox' class='mail-important' id='im10'>
+		        <label for='im10'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>ea has ludus audiam</td>
+		      <td class='mail-time'>Apr 17</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk11'>
+		        <label for='chk11'></label>
+		        <input type='checkbox' class='mail-star' id='star11'>
+		        <label for='star11'></label>
+		        <input type='checkbox' class='mail-important' id='im11'>
+		        <label for='im11'></label>
+		      </td>
+		      <td class='mail-sender'>ne nam</td>
+		      <td class='mail-title'>Qui tritani accumsan!</td>
+		      <td class='mail-time'>Apr 17</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk12'>
+		        <label for='chk12'></label>
+		        <input type='checkbox' class='mail-star' id='star12'>
+		        <label for='star12'></label>
+		        <input type='checkbox' class='mail-important' id='im12'>
+		        <label for='im12'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>mea laoreet maluisse</td>
+		      <td class='mail-time'>Apr 15</td>
+		    </tr>
+		    <tr class='unread'>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk13'>
+		        <label for='chk13'></label>
+		        <input type='checkbox' class='mail-star' id='star13'>
+		        <label for='star13'></label>
+		        <input type='checkbox' class='mail-important' id='im13'>
+		        <label for='im13'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>ferri ridens mei ad</td>
+		      <td class='mail-time'>Apr 14</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk14'>
+		        <label for='chk14'></label>
+		        <input type='checkbox' class='mail-star' id='star14'>
+		        <label for='star14'></label>
+		        <input type='checkbox' class='mail-important' id='im14'>
+		        <label for='im14'></label>
+		      </td>
+		      <td class='mail-sender'>eu agam</td>
+		      <td class='mail-title'>modus id nam</td>
+		      <td class='mail-time'>Apr 14</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk15'>
+		        <label for='chk15'></label>
+		        <input type='checkbox' class='mail-star' id='star15'>
+		        <label for='star15'></label>
+		        <input type='checkbox' class='mail-important' id='im15'>
+		        <label for='im15'></label>
+		      </td>
+		      <td class='mail-sender'>fierent</td>
+		      <td class='mail-title'>Lorem ipsum dolor</td>
+		      <td class='mail-time'>Apr 12</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk16'>
+		        <label for='chk16'></label>
+		        <input type='checkbox' class='mail-star' id='star16'>
+		        <label for='star16'></label>
+		        <input type='checkbox' class='mail-important' id='im16'>
+		        <label for='im16'></label>
+		      </td>
+		      <td class='mail-sender'>Agam </td>
+		      <td class='mail-title'>labitur accusam officiis</td>
+		      <td class='mail-time'>Apr 10</td>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk17'>
+		        <label for='chk17'></label>
+		        <input type='checkbox' class='mail-star' id='star17'>
+		        <label for='star17'></label>
+		        <input type='checkbox' class='mail-important' id='im17'>
+		        <label for='im17'></label>
+		      </td>
+		      <td class='mail-sender'>sit amet</td>
+		      <td class='mail-title'>Ut alia viris</td>
+		      <td class='mail-time'>Apr 10</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk18'>
+		        <label for='chk18'></label>
+		        <input type='checkbox' class='mail-star' id='star18'>
+		        <label for='star18'></label>
+		        <input type='checkbox' class='mail-important' id='im18'>
+		        <label for='im18'></label>
+		      </td>
+		      <td class='mail-sender'>salutandi </td>
+		      <td class='mail-title'>copiosae quo in, te vix eligendi</td>
+		      <td class='mail-time'>Apr 10</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk19'>
+		        <label for='chk19'></label>
+		        <input type='checkbox' class='mail-star' id='star19'>
+		        <label for='star19'></label>
+		        <input type='checkbox' class='mail-important' id='im19'>
+		        <label for='im19'></label>
+		      </td>
+		      <td class='mail-sender'>salutandi </td>
+		      <td class='mail-title'>complectitur et vi</td>
+		      <td class='mail-time'>Apr 10</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk20'>
+		        <label for='chk20'></label>
+		        <input type='checkbox' class='mail-star' id='star20'>
+		        <label for='star20'></label>
+		        <input type='checkbox' class='mail-important' id='im20'>
+		        <label for='im20'></label>
+		      </td>
+		      <td class='mail-sender'>salutandi </td>
+		      <td class='mail-title'>dolorem iudicabit democritum?</td>
+		      <td class='mail-time'>Apr 10</td>
+		    </tr>
+		    <tr>
+		      <td class='blank-cell'></td>
+		      <td class='mail-labels'>
+		        <input type='checkbox' class='mail-check' id='chk21'>
+		        <label for='chk21'></label>
+		        <input type='checkbox' class='mail-star' id='star21'>
+		        <label for='star21'></label>
+		        <input type='checkbox' class='mail-important' id='im21'>
+		        <label for='im21'></label>
+		      </td>
+		      <td class='mail-sender'>detracto in me</td>
+		      <td class='mail-title'>praesent eu, liber dicant?</td>
+		      <td class='mail-time'>Apr 10</td>
+		    </tr>
+
+		  </table>
+		  <br><br><br><br><br><br>
+	  </div>
+	</main>
+	<div class='overlay hide'></div>
+	<div class='bottom-panel'></div>
+
+  <ul class='dropdown-menu status-menu hide'>
+              <li>Try the new Hangouts</li>
+            <li class='splitLine'></li>
+              <li><span class='available'></span>Available</li>
+              <li><span class='busy'></span>Busy</li>
+              <li><span class='offline'></span>Invisible</li>
+              <li><span class='offline'></span>Sign Out</li>
+            <li class='splitLine'></li>
+             <li class='subtitle'>Show in chat list:</li>
+               <li>Most popular</li>
+               <li>All contacts</li>   
+            <li class='splitLine'></li>     
+               <li>Add Contact</li>
+              <li>Change picture</li>
+              <li>Chat settings</li>         
+            </ul>
+
+	
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
